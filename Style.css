@@ -1,0 +1,15 @@
+body {
+    background-color: #004d40; /* لون الخلفية: أخضر داكن */
+    color: white; /* لون النص الرئيسي: أبيض */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+button {
+    background-color: white; /* تم تغيير اللون إلى الأبيض */
+    color: black; /* لون خط الزر: أسود (مهم جداً للقراءة على الأبيض) */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
