@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>learn_2025_2026</title>
+
+  <!-- Google tag (gtag.js) - عداد الزوار الخفي -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QGHB74X4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1QGHB74X4V');
+  </script>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p>This is a site where I learn how to build web pages.</p>
+
+  <button onclick="alert('Clicked!')">Test Button</button>
+
+  <h2>My Changing Photos:</h2>
+  <img id="slideshow" width="300" alt="Changing photos">
+
+  <!-- كود تغيير الصور -->
+  <script>
+    const images = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+    let i = 0;
+    const img = document.getElementById("slideshow");
+
+    function changeImage() {
+      img.src = images[i];
+      i = (i + 1) % images.length;
+    }
+
+    changeImage();
+    setInterval(changeImage, 3000);
+  </script>
+
+  <!-- كود دردشة Tidio -->
+  <script src="//code.tidio.co/iidgx19x2uztusqqfbuocodnme0ilzsb.js" async></script>
+</body>
+</html>
