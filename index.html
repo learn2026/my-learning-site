@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>learn_2025_2026</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QGHB74X4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1QGHB74X4V');
+  </script>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p>This is a site where I learn how to build web pages.</p>
+
+  <button onclick="alert('Clicked!')">Test Button</button>
+
+  <h2>صور عن الأمواج والبحر:</h2>
+  <img id="unsplash-slideshow" width="400" alt="أمواج">
+
+  <br><br>
+  <button onclick="loadRandomWaveImage()">🔄 صورة أمواج جديدة</button>
+
+  <!-- سلايدر صور من Unsplash -->
+  <script>
+    const keywords = ["waves", "sea", "ocean", "beach", "coast"];
+    const img = document.getElementById("unsplash-slideshow");
+    let i = 0;
+
+    function changeUnsplashImage() {
+      const keyword = keywords[i];
+      img.src = `https://source.unsplash.com/400x300/?${keyword}&t=${Date.now()}`;
+      i = (i + 1) % keywords.length;
+    }
+
+    function loadRandomWaveImage() {
+      const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
+      img.src = `https://source.unsplash.com/400x300/?${randomKeyword}&t=${Date.now()}`;
+    }
+
+    // ابدأ بعرض أول صورة
+    changeUnsplashImage();
+    // غيّر الصورة تلقائيًا كل 4 ثوانٍ
+    setInterval(changeUnsplashImage, 4000);
+  </script>
+
+  <!-- دردشة Tidio -->
+  <script src="//code.tidio.co/iidgx19x2uztusqqfbuocodnme0ilzsb.js" async></script>
+</body>
+    </html>
