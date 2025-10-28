@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>learn_2025_2026</title>
+
+  <!-- Google Analytics - عداد زوار خفي -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QGHB74X4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1QGHB74X4V');
+  </script>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p>This is a site where I learn how to build web pages.</p>
+
+  <button onclick="alert('Clicked!')">Test Button</button>
+
+  <h2>صور طبيعة عشوائية:</h2>
+  <img id="random-slideshow" width="400" alt="طبيعة">
+
+  <br><br>
+  <button onclick="loadRandomImage()">🔄 صورة جديدة</button>
+
+  <!-- سلايدر صور من Picsum.photos -->
+  <script>
+    const img = document.getElementById("random-slideshow");
+
+    function getRandomImageUrl() {
+      // رقم عشوائي لضمان صورة جديدة دائمًا
+      const seed = Math.floor(Math.random() * 1000);
+      return `https://picsum.photos/400/300?random=${seed}`;
+    }
+
+    function loadRandomImage() {
+      img.src = getRandomImageUrl();
+    }
+
+    // ابدأ بصورة أولى
+    loadRandomImage();
+
+    // غيّر الصورة تلقائيًا كل 4 ثوانٍ
+    setInterval(loadRandomImage, 4000);
+  </script>
+
+  <!-- دردشة Tidio -->
+  <script src="//code.tidio.co/iidgx19x2uztusqqfbuocodnme0ilzsb.js" async></script>
+</body>
+    </html>
